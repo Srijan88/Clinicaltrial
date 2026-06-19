@@ -301,29 +301,29 @@ function GlassChip({
   );
 }
 
-/* A visible line that connects each floating chip to the central login card.
-   The line runs long enough that its center end tucks under the card (so it
-   reads as attached to the card), and a packet of light flows OUTWARD from the
-   card to the chip. The pulsing pointer node sits at the chip edge. */
+/* A short, stable tether on each floating chip: a glowing node at the chip edge
+   and a line that fades inward toward the login, with a packet of light running
+   along it. Fixed length so it stays clean at every width (a long line that
+   tries to reach the card floats disconnected when the viewport narrows). */
 function ChipConnector({ side }: { side: "left" | "right" }) {
   const isLeft = side === "left";
   return (
     <span
       className={
-        "pointer-events-none absolute top-1/2 hidden h-[2px] w-[clamp(120px,22vw,260px)] -translate-y-1/2 lg:block " +
+        "pointer-events-none absolute top-1/2 hidden h-[2px] w-[72px] -translate-y-1/2 lg:block " +
         (isLeft ? "left-full" : "right-full")
       }
     >
-      {/* the connecting line — brightest at the card (center) end */}
+      {/* line: bright at the chip (node) end, fading inward toward the center */}
       <span
         className={
           "absolute inset-0 rounded-full " +
           (isLeft
-            ? "bg-gradient-to-r from-sky-300/40 via-sky-300/60 to-sky-200/85"
-            : "bg-gradient-to-l from-sky-300/40 via-sky-300/60 to-sky-200/85")
+            ? "bg-gradient-to-r from-sky-300/70 to-transparent"
+            : "bg-gradient-to-l from-sky-300/70 to-transparent")
         }
       />
-      {/* pulsing pointer node anchored at the chip edge */}
+      {/* pulsing node anchored at the chip edge */}
       <span
         className={
           "absolute top-1/2 flex h-3 w-3 -translate-y-1/2 items-center justify-center " +
@@ -333,11 +333,11 @@ function ChipConnector({ side }: { side: "left" | "right" }) {
         <span className="absolute h-3 w-3 rounded-full bg-sky-300/55 animate-ping" />
         <span className="relative h-2 w-2 rounded-full bg-sky-200 shadow-[0_0_8px_2px_rgba(125,211,252,0.8)]" />
       </span>
-      {/* packet of light flowing OUT from the card toward the chip */}
+      {/* packet of light running along the tether */}
       <span
         className={
           "absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-white shadow-[0_0_8px_2px_rgba(255,255,255,0.85)] " +
-          (isLeft ? "flow-left" : "flow-right")
+          (isLeft ? "flow-right" : "flow-left")
         }
       />
     </span>
