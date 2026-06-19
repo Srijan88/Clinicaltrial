@@ -1,0 +1,33 @@
+# TrialSync agent → model wiring (NON-SECRET).
+#
+# Model IDs live here (not in code), per Milestone 2 Task 2. Secrets (API keys,
+# base URLs, Band agent ids/keys) live in .env and are NEVER committed.
+#
+# Providers are both OpenAI-compatible:
+#   featherless -> FEATHERLESS_BASE_URL / FEATHERLESS_API_KEY
+#   aiml        -> AIML_BASE_URL        / AIML_API_KEY
+#
+# Featherless powers intake/parser/discoverer; AI/ML API powers analyzer.
+agents:
+  # Qwen2.5-32B-Instruct on all three Featherless agents.
+  # WHY (vs 72B): 72B costs 4 concurrency units = the ENTIRE feather_pro_plus
+  # quota, so a single stalled/phantom request (e.g. an agent killed mid-call)
+  # blocks every subsequent request with HTTP 429, and Band's max_retries=1 turns
+  # that into a permanently-failed message that stalls the pipeline. 32B costs
+  # fewer units, leaving headroom so the sequential pipeline is resilient to
+  # leftover load. 32B was verified reliable (3/3 patients) and is faster.
+  # IMPORTANT: reliability also depends on enable_context_hydration=False
+  # (agent_common.py) and reasonably fresh agent processes (the InMemorySaver
+  # checkpointer accumulates conversation state across runs in a long-lived process).
+  intake:
+    provider: featherless
+    model: Qwen/Qwen2.5-32B-Instruct
+  discoverer:
+    provider: featherless
+    model: Qwen/Qwen2.5-32B-Instruct
+  parser:
+    provider: featherless
+    model: Qwen/Qwen2.5-32B-Instruct
+  analyzer:
+    provider: aiml
+    model: gpt-4o-mini

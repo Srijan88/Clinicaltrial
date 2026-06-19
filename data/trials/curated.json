@@ -1,0 +1,174 @@
+[
+  {
+    "nctId": "NCT06207734",
+    "title": "Discontinuation of CDK4/6 Inhibitors in Patients With Metastatic HR Positive, HER2 Negative Breast Cancer",
+    "phase": "PHASE2",
+    "status": "RECRUITING",
+    "conditions": [
+      "Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "id": "734-i1",
+        "text": "Hormone-receptor positive (ER+) disease",
+        "type": "inclusion",
+        "lever": "hr_status",
+        "operator": "==",
+        "value": "positive"
+      },
+      {
+        "id": "734-i2",
+        "text": "HER2 negative / zero disease",
+        "type": "inclusion",
+        "lever": "her2_status",
+        "operator": "in",
+        "value": [
+          "negative",
+          "zero"
+        ]
+      },
+      {
+        "id": "734-i3",
+        "text": "On a CDK4/6 inhibitor (with endocrine therapy)",
+        "type": "inclusion",
+        "lever": "on_cdk46_inhibitor",
+        "operator": "==",
+        "value": true
+      },
+      {
+        "id": "734-i4",
+        "text": "Durable disease control on CDK4/6i for >=12 months",
+        "type": "inclusion",
+        "lever": "durable_disease_control",
+        "operator": "==",
+        "value": true
+      },
+      {
+        "id": "734-i5",
+        "text": "ECOG performance status 0 or 1",
+        "type": "inclusion",
+        "lever": "ecog",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ]
+      }
+    ],
+    "rawCriteria": "Inclusion Criteria:\n\n1. Female patient has given written informed consent\n2. Patient is \u2265 18 years of age at time of signing the written informed consent\n3. Patient has been diagnosed with histologically confirmed metastatic adenocarcinoma of the breast\n4. Patient has documented histological or cytological confirmation of estrogen receptor positive (ER+) and HER2 negative (HER2-) disease\n5. Patient has no curative treatment option by surgery or radiotherapy\n6. Patient was treated with CDK4/6 inhibitor plus endocrine therapy for at least 12 months with disease control (complete remission, partial remission or stable disease) as judged by the treating physician before planned study treatment initiation\n7. Patient has a preserved performance status (ECOG \u2264 2)\n8. Patient has adequate bone marrow, renal and hepatic function:\n\n   1. Hemoglobin \\> 9.0 g/dL\n   2. Absolute neutrophil count judged as appropriate for study therapy by the investigator\n   3. Platelets \u2265 100 x 109/L\n   4. Calculated creatinine clearance judged as appropriate for study therapy by the investigator\n   5. AST (SGOT) / ALT (SGPT) and alkaline phosphatase \u2264 2.5x ULN\n   6. Serum albumin \\> 30 g/L\n9. Patients considered postmenopausal according to one of the following definition:\n\n   1. Women \\<50 years of age who are amenorrheic for 12 months or more following cessation of exogenous hormonal treatments and whose levels of luteinizing hormone and follicle-stimulating hormone are in the post-menopausal institutional range\n   2. Women \u226550 years of age who are amenorrheic for 12 months or more following cessation of all exogenous hormonal treatments, had radiation-induced menopause with last menses \\>1 year ago or had chemotherapy-induced menopause with last menses \\>1 year ago\n   3. Artificially induced postmenopausal women (by Gonadotropin-releasing hormone \\[GnRH\\] analogs)\n10. WOCBP must have a negative serum pregnancy test within 7 days prior to start of trial\n\nExclusion Criteria:\n\n1. Patient has active (or history of) brain or leptomeningeal metastases\n2. Patient is pre- or perimenopausal. Patient is pregnant or breast feeding or planning to become pregnant within five times the half-life of the IMPs after the end of treatment.\n3. Patient has significant cardiovascular disease, such as cardiac disease (New York Heart Association Class II or greater), myocardial infarction or cerebrovascular accident within 6 months prior to initiation of study treatment, unstable arrhythmias, or unstable angina\n4. Patient has other concomitant or previous malignancy, except adequately treated in-situ carcinoma of the uterine cervix, basal or squamous cell carcinoma of the skin, cancer in complete remission for \\> 5 years\n5. Patient has contraindication or shows hypersensitivity to the existing treatment with CDK4/6 inhibitor plus endocrine therapy\n6. Patient shows evidence of any other disease, neurologic or metabolic dysfunction, physical examination finding or laboratory finding giving reasonable suspicion of a disease or condition that contraindicates the use of any of the study medications, puts the patient at higher risk for treatment-related complications or may affect the interpretation of study results\n7. Patient participated in another clinical study with an investigational medicinal product during the last 28 days before treatment initiation or 7 half-lives of previously used trial medication, whichever is longer or participate in such a study at the same time as this trial.\n\n   Note: Participation in non-interventional clinical studies or registries is allowed.\n8. Any co-existing medical condition that in the investigator's judgement will substantially increase the risk associated with the patient's participation in the study.\n9. Patient who has been incarcerated or involuntarily institutionalized by court order or by the authorities.\n10. Patients who are unable to consent because they do not understand the nature, significance and implications of the clinical trial and therefore cannot form a rational intention in the light of the facts.",
+    "detailsUrl": "https://clinicaltrials.gov/study/NCT06207734"
+  },
+  {
+    "nctId": "NCT04360941",
+    "title": "PAveMenT: Palbociclib and Avelumab in Metastatic AR+ Triple Negative Breast Cancer",
+    "phase": "PHASE1",
+    "status": "RECRUITING",
+    "conditions": [
+      "Triple Negative Breast Cancer",
+      "Locally Advanced Breast Cancer",
+      "Recurrent Breast Cancer",
+      "Metastatic Breast Cancer",
+      "ER+ Breast Cancer",
+      "HER2-positive Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "id": "941-i1",
+        "text": "Estrogen receptor negative (defines TNBC)",
+        "type": "inclusion",
+        "lever": "er_status",
+        "operator": "==",
+        "value": "negative"
+      },
+      {
+        "id": "941-i2",
+        "text": "Progesterone receptor negative (defines TNBC)",
+        "type": "inclusion",
+        "lever": "pr_status",
+        "operator": "==",
+        "value": "negative"
+      },
+      {
+        "id": "941-i3",
+        "text": "HER2 negative / zero (defines TNBC)",
+        "type": "inclusion",
+        "lever": "her2_status",
+        "operator": "in",
+        "value": [
+          "zero",
+          "negative"
+        ]
+      },
+      {
+        "id": "941-i4",
+        "text": "Androgen receptor positive (AR+)",
+        "type": "inclusion",
+        "lever": "ar_status",
+        "operator": "==",
+        "value": "positive"
+      },
+      {
+        "id": "941-i5",
+        "text": "Measurable metastatic disease (RECIST 1.1)",
+        "type": "inclusion",
+        "lever": "measurable_disease",
+        "operator": "==",
+        "value": "present"
+      }
+    ],
+    "rawCriteria": "Inclusion Criteria Part A:\n\n1. Patients with recurrent inoperable locally advanced or metastatic breast cancer.\n2. Previously treated with at least one prior line of chemotherapy for advanced disease, but no more than two prior lines of chemotherapy for advanced disease. Patients with ER+ breast cancer must have received at least one prior line of hormone therapy for advanced disease. Patients with HER2+ breast cancer must have received at least one prior line of HER2 directed therapy.\n3. Measurable disease (RECIST 1.1)\n4. Haematological and biochemical indices within the ranges stated in the study protocol. These measurements must be performed within one week (Day -7 to Day 1) before the patient goes in the trial.\n5. Women/female patients with child-bearing potential (defined as the fertile status following menarche and until becoming post-menopausal unless permanently sterile by methods that include hysterectomy, bilateral salpingectomy and bilateral oophorectomy) must have a negative urine or serum pregnancy test within 7 days prior to start of trial.\n\n   Women/females of child bearing potential or their male partners must use a highly effective method of contraception for 2 weeks before starting the study treatment, throughout the treatment period and for 1 month after discontinuation of treatment with palbociclib and avelumab (women/female patients) or 14 weeks (men/male patients). Highly effective methods are defined as methods that can achieve a failure rate of less than 1% per year when used consistently and correctly are considered as highly effective birth control methods, such methods include:\n   * Oral, intra-vaginal or transdermal combined hormonal contraception\n   * Oral, injectable or implantable progesterone-only contraception\n   * Intrauterine device\n   * Intrauterine hormone-releasing system,\n   * Bilateral tubal occlusion\n   * Vasectomised partner\n   * True abstinence:\\* When this is in line with the preferred and usual lifestyle of the subject\n\n   Key: \\* it is only considered highly effective if the patient is refraining from sexual intercourse during the entire period of risk associated with the study treatments\n6. 18 years of age or over.\n7. World Health Organisation (WHO) performance status 0 or 1\n8. Estimated life expectancy of at least 3 months in the opinion of the investigator\n9. Signed and dated informed consent.\n10. Patients willing and able to comply with scheduled visits, treatment plans, laboratory tests, follow up and other procedures\n\nInclusion Criteria Part B:\n\n1. Patients with recurrent inoperable locally advanced or metastatic AR+ triple negative breast cancer with ER, PgR and HER2 status determined locally and AR determined centrally on archival metastatic tissue. Archival tissue from the primary tumour (which must have been ER/PgR negative and collected within 5 years prior to metastatic relapse) may be used for AR testing if no archival metastatic tissue is available.\n2. Previously treated with at least one prior line of chemotherapy for advanced disease, but no more than two prior lines of chemotherapy for advanced disease.\n3. Measurable disease (RECIST 1.1) amenable to fresh biopsy\n4. Haematological and biochemical indices within the ranges stated in the study protocol. These measurements must be performed within one week (Day -7 to Day 1) before the patient goes in the trial.\n5. Female patients with child-bearing potential must have a negative urine or serum pregnancy test within 7 days prior to start of trial.\n\n   Women/females of child bearing potential or their male partners must use a highly effective method of contraception for 2 weeks before starting the study treatment, throughout the treatment period and for 1 month after discontinuation of treatment with palbociclib and avelumab (women/female patients) or 14 weeks (men/male patients). Highly effective methods are defined as methods that can achieve a failure rate of less than 1% per year when used consistently and correctly are considered as highly effective birth control methods, such methods include:\n   * Oral, intra-vaginal or transdermal combined hormonal contraception\n   * Oral, injectable or implantable progesterone-only contraception\n   * Intrauterine device\n   * Intrauterine hormone-releasing system,\n   * Bilateral tubal occlusion\n   * Vasectomised partner\n   * True abstinence:\\* When this is in line with the preferred and usual lifestyle of the subject\n\n   Key: \\* it is only considered highly effective if the patient is refraining from sexual intercourse during the entire period of risk associated with the study treatments\n6. Age 18 years of age or over\n7. World Health Organisation (WHO) performance status 0 or 1\n8. Estimated life expectancy of at least 3 months in the opinion of the investigator\n9. Signed and dated informed consent\n10. Patients willing and able to comply with scheduled visits, treatment plans, laboratory tests, follow up, and other procedures\n11. Available archival breast primary tumour tissue (or metastatic tissue if de novo metastatic disease)\n12. Patient willing to undergo a mandatory baseline fresh tumour tissue biopsy procedure (clinical or radiologically-guided)\n\nExclusion Criteria Parts A \\& B:\n\n1. Oral chemotherapy within two weeks, weekly iv chemotherapy within three weeks or any other systemic chemotherapy or investigational medicinal products during the previous four weeks.\n2. Hormonal therapy within 7 days except luteinizing hormone-releasing hormone (LHRH) analogues for ovarian suppression. Bisphosphonates or RANK ligand antagonists are permitted for the management of bone metastases.\n3. Previous exposure to immune checkpoint inhibitors or immune co-stimulatory drugs in the advanced setting. (Note: Patients who have received neoadjuvant and/or adjuvant pembrolizumab are eligible if treatment was completed at 6 months prior to metastatic relapse.)\n4. Previous treatment with palbociclib or any agents which inhibit CDK4/6. (Note: Patients who have received adjuvant abemaciclib or ribociclib for early breast cancer are eligible if treatment was completed at least 12 months prior to metastatic relapse.)\n5. Major surgery (excluding minor procedures, e.g. placement of vascular access) within 4 weeks or radiation therapy within 14 days prior to study entry\n6. Patients with known symptomatic brain metastases requiring steroids, untreated brain metastases, leptomeningeal disease or spinal cord compression.\n7. Active infection requiring systemic therapy\n8. Any of the following within 12 months prior to study entry: myocardial infarction, history of myocarditis, uncontrolled angina, coronary/peripheral artery bypass graft, symptomatic congestive heart failure, cerebrovascular accident, or transient ischemic attack.\n9. Uncontrolled hypertension or cardiac dysrhythmia including atrial fibrillation\n10. Active autoimmune disease that might deteriorate when receiving an immuno-stimulatory agent. Patients with diabetes type I, vitiligo, psoriasis, or hypo- or hyperthyroid diseases not requiring immunosuppressive treatment are eligible.\n11. Current use of immunosuppressive medication, EXCEPT for the following: a. intranasal, inhaled, topical steroids, or local steroid injection (e.g., intra-articular injection); b. Systemic corticosteroids at physiologic doses \u2264 10 mg/day of prednisone or equivalent; c. Steroids as premedication for hypersensitivity reactions (e.g., CT scan premedication).\n12. Other severe acute or chronic medical conditions including colitis, inflammatory bowel disease, pneumonitis (even if fully resolved), pulmonary fibrosis, end stage renal disease on haemodialysis or psychiatric conditions including recent (within the past year) or active suicidal ideation or behaviour; or laboratory abnormalities that may increase the risk associated with study participation or study treatment administration or may interfere with the interpretation of study results and, in the judgment of the investigator, would make the patient inappropriate for entry into this study.\n13. Patients on warfarin or direct acting oral anticoagulants. Patients requiring anticoagulation for rate-controlled AF or previous venous thromboembolism should be switched to low-molecular weight heparin.\n14. Known HIV or AIDS-related illness, active infection requiring systemic therapy, or positive HBV or HCV test indicating acute or chronic infection\n15. Known severe hypersensitivity reactions to monoclonal antibodies (Grade \u2265 3 NCI CTCAE v 5), any history of anaphylaxis, or uncontrolled asthma (that is, 3 or more features of partially controlled asthma)\n16. Inability or unwillingness to swallow pills, or receive IV injections.\n17. Persisting toxicity related to prior therapy \\>Grade 1 (except for stable peripheral neuropathy grade \u22642 or alopecia grade \u22642).\n18. Pregnancy or lactation (women/females of childbearing potential must have a negative pregnancy test within 7 days prior to treatment initiation)\n19. Diagnosis of other malignancy within 3 years, except for previous breast cancer, adequately treated basal cell or squamous cell skin cancer, or carcinoma in situ of the cervix, or low-grade (Gleason \u22646) prostate cancer\n20. Is a participant or plans to participate in another interventional clinical trial, whilst taking part in this study. Participation in an observational trial would be acceptable.\n21. Known prior or suspected hypersensitivity to investigational products or to any of the excipients\n22. Vaccination within 4 weeks of the first dose of avelumab and while on trial is prohibited except for administration of inactivated vaccines. Live vaccines must also be avoided for 3 months after the last dose of avelumab.\n23. Any psychiatric condition that would prohibit the understanding or rendering of informed consent\n24. Requirement for continued use of preparations containing St. John's Wort is specifically contraindicated. Other herbal medicinal or natural products that patient is intended to take during the trial must be explored at the beginning and during the course of the trial and discussed with the investigator.\n25. Requirement for continued use of CYP3A inhibitors, inducers or substrates (listed in Appendix 4).\n26. Patients with rare hereditary problems of galactose intolerance, the Lapp lactase deficiency, or glucose-galactose malabsorption should not take this medicine as this medicinal product contains lactose.\n27. Any other condition which in the Investigator's opinion would not make the patient a good candidate for the clinical trial.",
+    "detailsUrl": "https://clinicaltrials.gov/study/NCT04360941"
+  },
+  {
+    "nctId": "NCT06157892",
+    "title": "A Study of Disitamab Vedotin With Other Anticancer Drugs in Solid Tumors",
+    "phase": "PHASE2",
+    "status": "RECRUITING",
+    "conditions": [
+      "Breast Neoplasms",
+      "Gastroesophageal Junction Adenocarcinoma",
+      "HER2 Low Breast Neoplasms",
+      "HER2 Positive Breast Neoplasms",
+      "Stomach Neoplasms",
+      "Triple Negative Breast Neoplasms",
+      "Metastatic Breast Cancer",
+      "Metastatic Gastric Cancer",
+      "Advanced Breast Cancer",
+      "Advanced Gastric Cancer"
+    ],
+    "criteria": [
+      {
+        "id": "892-i1",
+        "text": "HER2-expressing disease (HER2-positive or HER2-low)",
+        "type": "inclusion",
+        "lever": "her2_status",
+        "operator": "in",
+        "value": [
+          "positive",
+          "low"
+        ]
+      },
+      {
+        "id": "892-i2",
+        "text": "Metastatic / locally-advanced breast cancer",
+        "type": "inclusion",
+        "lever": "metastatic_disease",
+        "operator": "==",
+        "value": "present"
+      },
+      {
+        "id": "892-i3",
+        "text": "ECOG performance status 0 or 1",
+        "type": "inclusion",
+        "lever": "ecog",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ]
+      }
+    ],
+    "rawCriteria": "Inclusion Criteria:\n\nGeneral Inclusion Criteria\n\n* Measurable disease according to RECIST v1.1\n* Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1\n\nDose Escalation and Optimization Phase Inclusion Criteria\n\n* Histologically or cytologically confirmed diagnosis of gastric or gastroesophageal junction adenocarcinoma or breast carcinoma\n* Locally-advanced, unresectable, or metastatic stage\n* Must have experienced disease progression on or after standard of care therapies or be intolerant of standard of care therapies.\n\nCohort A (HER2-Low Breast Cancer) Inclusion Criteria\n\n* Histologically or cytologically confirmed diagnosis of breast carcinoma\n* Locally-advanced, unresectable, or metastatic stage\n* HER2-low status determined by most recent local assessment (IHC 1+ or IHC 2+/ISH-negative)\n* Prior therapies requirements\n\n  * No more than 3 prior systemic cytotoxic chemotherapy regimens (including ADCs) for LA/mBC.\n  * Participants with known BRCA mutation must have received a PARP-inhibitor where available and not medically contraindicated\n  * Have progression on or after, or intolerant to, T-DXd, sacituzumab govitecan, or other topoisomerase I inhibitor therapies, if available as local standard of care therapy\n  * Participants with HR+ tumors must have intolerance to endocrine therapy or endocrine therapy refractory disease:\n\n    * Progressed on \u22652 lines of endocrine therapy for LA/mBC AND had received a CDK4/6 inhibitor in the adjuvant or metastatic setting OR\n    * Progressed on 1 line of endocrine therapy for LA/mBC AND had a relapse while on adjuvant endocrine therapy after definitive surgery for primary tumor AND had received a CDK4/6 inhibitor in the adjuvant or advanced setting\n  * Participants with HR negative, HER2-low and PD-L1-positive (CPS 10 or greater) tumors must have received pembrolizumab with chemotherapy if available as local standard of care therapy.\n  * Participants with HR negative, HER2-low and PD-L1-positive (CPS 10 or greater) tumors must have received pembrolizumab (or other PD-(L)1 inhibitor) with chemotherapy if available as local standard of care therapy and not medically contraindicated.\n\nCohort B (HER2+ Breast Cancer) Inclusion Criteria\n\n* Histologically or cytologically confirmed diagnosis breast carcinoma\n* Locally-advanced, unresectable, or metastatic stage\n* HER2+ status determined by most recent local assessment (IHC 3+ or IHC 2+/ISH+)\n* Participants must have:\n\n  * Received prior trastuzumab, pertuzumab and a taxane if available as local standard of care therapy for advanced disease.\n  * Have progression on or after, or intolerant to, T-DXd or other topoisomerase I inhibitor therapies\n  * No more than 3 prior systemic cytotoxic chemotherapy regimens (including ADCs) for LA/mBC\n\nCohort C (HER2-Low Gastric or Gastroesophageal Junction Adenocarcinoma) Inclusion Criteria\n\n* Histologically or cytologically confirmed diagnosis of gastric or gastroesophageal junction adenocarcinoma\n* Locally-advanced, unresectable, or metastatic stage\n* HER2-low expression defined as IHC 1+ or IHC 2+/ISH-negative determined by most recent local assessment\n* Willing and able to provide archival or newly obtained formalin-fixed paraffin-embedded (FFPE) tumor tissue blocks\n* Participants must have received:\n\n  * Prior systemic therapy with platinum, fluorouracil, or taxane for locally advanced unresectable or metastatic disease\n  * Progression within 6 months of last dose of (neo)adjuvant cytotoxic chemotherapy is considered as 1 line of systemic therapy for LA/mGC/GEJC\n  * Prior anti-PD-(L)1 therapy is allowed\n  * No more than 2 prior systemic cytotoxic chemotherapy regimens (including ADC) for LA/mGC/GEJC\n* Must not have received prior treatment with HER2 directed therapy\n\nCohort D (HER2+ LA/mGC/GEJC) Inclusion Criteria\n\n* Histologically or cytologically confirmed diagnosis of gastric or gastroesophageal junction adenocarcinoma\n* Locally-advanced, unresectable, or metastatic stage\n* HER2+ status determined by most recent local assessment (IHC 3+ or IHC 2+/ISH+)\n* Participants must have:\n\n  * Received prior trastuzumab plus fluoropyrimidine and platinum containing chemotherapy if no contraindication.\n  * Prior T-DXd treatment is allowed\n  * Prior PD1 inhibitor therapy is allowed\n  * No more than 2 prior systemic cytotoxic chemotherapy regimens (including ADCs) for LA/mGC/GEJC\n\nExclusion Criteria:\n\n* Known hypersensitivity to any excipient contained in the drug formulation of disitamab vedotin or tucatinib\n* Prior therapy with ADCs with MMAE payload\n* Prior therapy with tucatinib\n* Active CNS and/or leptomeningeal metastasis.\n* Participants who have received prior systemic anticancer treatment including investigational agents within 4 weeks prior to first dose of study treatment\n* History of other invasive malignancy within 3 years before the first dose of study intervention, or any evidence of residual disease from a previously diagnosed malignancy.\n* Unable to swallow oral tablets or capsules or any significant GI disease which would preclude the adequate oral absorption of medications",
+    "detailsUrl": "https://clinicaltrials.gov/study/NCT06157892"
+  }
+]

@@ -1,0 +1,459 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT06207734",
+      "orgStudyIdInfo": {
+        "id": "DISCUSS"
+      },
+      "organization": {
+        "fullName": "Institut f\u00fcr Klinische Krebsforschung IKF GmbH at Krankenhaus Nordwest",
+        "class": "OTHER"
+      },
+      "briefTitle": "Discontinuation of CDK4/6 Inhibitors in Patients With Metastatic HR Positive, HER2 Negative Breast Cancer",
+      "officialTitle": "Discontinuation of CDK4/6 Inhibitors in Patients With Metastatic HR Positive, HER2 Negative Breast Cancer With Durable Disease Control: A Randomized Low-intervention Phase II Trial of the AIO Working Groups Breast Cancer and Quality of Life"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2025-04",
+      "overallStatus": "RECRUITING",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2024-01-17",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2027-01-10",
+        "type": "ESTIMATED"
+      },
+      "completionDateStruct": {
+        "date": "2028-07-10",
+        "type": "ESTIMATED"
+      },
+      "studyFirstSubmitDate": "2024-01-03",
+      "studyFirstSubmitQcDate": "2024-01-12",
+      "studyFirstPostDateStruct": {
+        "date": "2024-01-17",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2025-04-30",
+      "lastUpdatePostDateStruct": {
+        "date": "2025-05-01",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Institut f\u00fcr Klinische Krebsforschung IKF GmbH at Krankenhaus Nordwest",
+        "class": "OTHER"
+      }
+    },
+    "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false
+    },
+    "descriptionModule": {
+      "briefSummary": "This is a low-intervention, randomized, non-comparative, open-label, multicenter, prospective, phase II trial investigating discontinuation of CDK4/6 inhibitors in patients with metastatic HR positive, HER2 negative breast cancer with durable disease control.",
+      "detailedDescription": "The primary objective is to evaluate long-term disease stabilization of CDK4/6 inhibitors discontinuation after a prolonged treatment period with continued endocrine therapy in breast cancer patients exhibiting at least stable disease after at least 12 months of combination treatment."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "keywords": [
+        "Metastatic HR positive, HER2 negative breast cancer",
+        "CDK4/6 inhibitors",
+        "Endocrine therapy"
+      ]
+    },
+    "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ],
+      "designInfo": {
+        "allocation": "RANDOMIZED",
+        "interventionModel": "PARALLEL",
+        "primaryPurpose": "TREATMENT",
+        "maskingInfo": {
+          "masking": "NONE"
+        }
+      },
+      "enrollmentInfo": {
+        "count": 120,
+        "type": "ESTIMATED"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "Control arm CDK4/6 continuation",
+          "type": "ACTIVE_COMPARATOR",
+          "description": "* Continuation of CDK4/6 inhibitor treatment\n* Continuation of endocrine treatment",
+          "interventionNames": [
+            "Drug: Continuation of CDK4/6 inhibitor Palbociclib",
+            "Drug: Continuation of CDK4/6 inhibitor -Palbociclib",
+            "Drug: Continuation of CDK4/6 inhibitor Abemaciclib"
+          ]
+        },
+        {
+          "label": "Experimental arm CDK4/6 inhibitor discontinuation",
+          "type": "EXPERIMENTAL",
+          "description": "* Discontinuation of CDK4/6 inhibitor treatment\n* Continuation of endocrine treatment",
+          "interventionNames": [
+            "Drug: Discontinuation of CDK4/6 inhibitor Palbociclib",
+            "Drug: Discontinuation of CDK4/6 inhibitor -Palbociclib",
+            "Drug: Discontinuation of CDK4/6 inhibitor Abemaciclib"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "DRUG",
+          "name": "Continuation of CDK4/6 inhibitor Palbociclib",
+          "description": "Continuation of CDK4/6 inhibitor Palbociclib",
+          "armGroupLabels": [
+            "Control arm CDK4/6 continuation"
+          ],
+          "otherNames": [
+            "Study treatment"
+          ]
+        },
+        {
+          "type": "DRUG",
+          "name": "Discontinuation of CDK4/6 inhibitor Palbociclib",
+          "description": "Discontinuation of CDK4/6 inhibitor Palbociclib",
+          "armGroupLabels": [
+            "Experimental arm CDK4/6 inhibitor discontinuation"
+          ],
+          "otherNames": [
+            "Study treatment"
+          ]
+        },
+        {
+          "type": "DRUG",
+          "name": "Continuation of CDK4/6 inhibitor -Palbociclib",
+          "description": "Continuation of CDK4/6 inhibitor -Palbociclib",
+          "armGroupLabels": [
+            "Control arm CDK4/6 continuation"
+          ],
+          "otherNames": [
+            "Study treatment"
+          ]
+        },
+        {
+          "type": "DRUG",
+          "name": "Discontinuation of CDK4/6 inhibitor -Palbociclib",
+          "description": "Discontinuation of CDK4/6 inhibitor -Palbociclib",
+          "armGroupLabels": [
+            "Experimental arm CDK4/6 inhibitor discontinuation"
+          ],
+          "otherNames": [
+            "Study treatment"
+          ]
+        },
+        {
+          "type": "DRUG",
+          "name": "Continuation of CDK4/6 inhibitor Abemaciclib",
+          "description": "Continuation of CDK4/6 inhibitor Abemaciclib",
+          "armGroupLabels": [
+            "Control arm CDK4/6 continuation"
+          ],
+          "otherNames": [
+            "Study treatment"
+          ]
+        },
+        {
+          "type": "DRUG",
+          "name": "Discontinuation of CDK4/6 inhibitor Abemaciclib",
+          "description": "Discontinuation of CDK4/6 inhibitor Abemaciclib",
+          "armGroupLabels": [
+            "Experimental arm CDK4/6 inhibitor discontinuation"
+          ],
+          "otherNames": [
+            "Study treatment"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Progression-free survival rate 12 months after randomization (PFS@12_stopping)",
+          "description": "Proportion of patients alive and without progression according to radiologic imaging assessment",
+          "timeFrame": "12 months"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Progression-free survival (PFS)",
+          "description": "Time from randomization until progress",
+          "timeFrame": "54 months"
+        },
+        {
+          "measure": "Time to treatment failure (TTF)",
+          "description": "Time from randomization to end of treatment because of patient's wish, investigator's decision, toxicity, or progression",
+          "timeFrame": "54 months"
+        },
+        {
+          "measure": "Progression-free survival (PFS2)",
+          "description": "Time from re-treatment with CDK4/6 inhibitors to clinical disease progression or death from any cause",
+          "timeFrame": "54 months"
+        },
+        {
+          "measure": "Time to treatment failure (TTF2)",
+          "description": "Time to end of treatment because of patient's wish, investigator's decision, toxicity, or clinical progression after re-treatment with CDK4/6 inhibitors",
+          "timeFrame": "54 months"
+        },
+        {
+          "measure": "Time to first use of chemotherapy",
+          "description": "Time to first use of chemotherapy after progression on combined endocrine/CDK4/6 inhibitor treatment",
+          "timeFrame": "54 months"
+        },
+        {
+          "measure": "Quality of life (QoL) EORTC QLQ-C30",
+          "description": "QoLassessed with the QoL questionnaire EORTC QLQ-C30",
+          "timeFrame": "54 months"
+        },
+        {
+          "measure": "Quality of life (QoL) EORTC QLQ-BR23",
+          "description": "QoLassessed with the QoL questionnaire EORTC QLQ-BR23",
+          "timeFrame": "54 months"
+        },
+        {
+          "measure": "Safety (rate of adverse events)",
+          "description": "Type, incidence and severity of adverse events (AEs) and serious adverse events (SAEs) graded according to NCI CTCAE v5.0",
+          "timeFrame": "54 months"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Female patient has given written informed consent\n2. Patient is \u2265 18 years of age at time of signing the written informed consent\n3. Patient has been diagnosed with histologically confirmed metastatic adenocarcinoma of the breast\n4. Patient has documented histological or cytological confirmation of estrogen receptor positive (ER+) and HER2 negative (HER2-) disease\n5. Patient has no curative treatment option by surgery or radiotherapy\n6. Patient was treated with CDK4/6 inhibitor plus endocrine therapy for at least 12 months with disease control (complete remission, partial remission or stable disease) as judged by the treating physician before planned study treatment initiation\n7. Patient has a preserved performance status (ECOG \u2264 2)\n8. Patient has adequate bone marrow, renal and hepatic function:\n\n   1. Hemoglobin \\> 9.0 g/dL\n   2. Absolute neutrophil count judged as appropriate for study therapy by the investigator\n   3. Platelets \u2265 100 x 109/L\n   4. Calculated creatinine clearance judged as appropriate for study therapy by the investigator\n   5. AST (SGOT) / ALT (SGPT) and alkaline phosphatase \u2264 2.5x ULN\n   6. Serum albumin \\> 30 g/L\n9. Patients considered postmenopausal according to one of the following definition:\n\n   1. Women \\<50 years of age who are amenorrheic for 12 months or more following cessation of exogenous hormonal treatments and whose levels of luteinizing hormone and follicle-stimulating hormone are in the post-menopausal institutional range\n   2. Women \u226550 years of age who are amenorrheic for 12 months or more following cessation of all exogenous hormonal treatments, had radiation-induced menopause with last menses \\>1 year ago or had chemotherapy-induced menopause with last menses \\>1 year ago\n   3. Artificially induced postmenopausal women (by Gonadotropin-releasing hormone \\[GnRH\\] analogs)\n10. WOCBP must have a negative serum pregnancy test within 7 days prior to start of trial\n\nExclusion Criteria:\n\n1. Patient has active (or history of) brain or leptomeningeal metastases\n2. Patient is pre- or perimenopausal. Patient is pregnant or breast feeding or planning to become pregnant within five times the half-life of the IMPs after the end of treatment.\n3. Patient has significant cardiovascular disease, such as cardiac disease (New York Heart Association Class II or greater), myocardial infarction or cerebrovascular accident within 6 months prior to initiation of study treatment, unstable arrhythmias, or unstable angina\n4. Patient has other concomitant or previous malignancy, except adequately treated in-situ carcinoma of the uterine cervix, basal or squamous cell carcinoma of the skin, cancer in complete remission for \\> 5 years\n5. Patient has contraindication or shows hypersensitivity to the existing treatment with CDK4/6 inhibitor plus endocrine therapy\n6. Patient shows evidence of any other disease, neurologic or metabolic dysfunction, physical examination finding or laboratory finding giving reasonable suspicion of a disease or condition that contraindicates the use of any of the study medications, puts the patient at higher risk for treatment-related complications or may affect the interpretation of study results\n7. Patient participated in another clinical study with an investigational medicinal product during the last 28 days before treatment initiation or 7 half-lives of previously used trial medication, whichever is longer or participate in such a study at the same time as this trial.\n\n   Note: Participation in non-interventional clinical studies or registries is allowed.\n8. Any co-existing medical condition that in the investigator's judgement will substantially increase the risk associated with the patient's participation in the study.\n9. Patient who has been incarcerated or involuntarily institutionalized by court order or by the authorities.\n10. Patients who are unable to consent because they do not understand the nature, significance and implications of the clinical trial and therefore cannot form a rational intention in the light of the facts.",
+      "healthyVolunteers": false,
+      "sex": "FEMALE",
+      "minimumAge": "18 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ]
+    },
+    "contactsLocationsModule": {
+      "centralContacts": [
+        {
+          "name": "Thomas Decker, Prof.",
+          "role": "CONTACT",
+          "phone": "+49 751 366197",
+          "phoneExt": "0",
+          "email": "Thomas.Decker@onkonet.eu"
+        },
+        {
+          "name": "Regina Eickhoff, Dr.",
+          "role": "CONTACT",
+          "phone": "+49 69 / 5899 787",
+          "phoneExt": "33",
+          "email": "eickhoff.regina@ikf-khnw.de"
+        }
+      ],
+      "overallOfficials": [
+        {
+          "name": "Salah-Eddin Al-Batran, Prof.",
+          "affiliation": "Institut f\u00fcr Klinische Krebsforschung IKF GmbH at Krankenhaus Nordwest",
+          "role": "STUDY_DIRECTOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Charit\u00e9 Berlin",
+          "status": "RECRUITING",
+          "city": "Berlin",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 52.52437,
+            "lon": 13.41053
+          }
+        },
+        {
+          "facility": "H\u00e4matologische Onkologische Praxis im Medicum",
+          "status": "RECRUITING",
+          "city": "Bremen",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 53.07582,
+            "lon": 8.80717
+          }
+        },
+        {
+          "facility": "St. Johannes Hospital Dortmund",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "city": "Dortmund",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 51.51494,
+            "lon": 7.466
+          }
+        },
+        {
+          "facility": "Praxis und Tagesklinik",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "city": "Friedrichshafen",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 47.65689,
+            "lon": 9.47554
+          }
+        },
+        {
+          "facility": "Haus\u00e4rztliche und Onkologische Gemeinschaftspraxis",
+          "status": "RECRUITING",
+          "city": "Gerlingen",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 48.79954,
+            "lon": 9.06316
+          }
+        },
+        {
+          "facility": "Onkologische GP G\u00fctersloh",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "city": "G\u00fctersloh",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 51.90693,
+            "lon": 8.37853
+          }
+        },
+        {
+          "facility": "H\u00e4matologisch-Onkologische Praxis Altona",
+          "status": "RECRUITING",
+          "city": "Hamburg",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 53.55073,
+            "lon": 9.99302
+          }
+        },
+        {
+          "facility": "Universit\u00e4tsmedizin der Johannes Gutenberg-Universit\u00e4t Mainz",
+          "status": "RECRUITING",
+          "city": "Mainz",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 49.98185,
+            "lon": 8.28008
+          }
+        },
+        {
+          "facility": "MVZ f\u00fcr H\u00e4matologie und Onkologie der MVZ M\u00fclheim GmbH",
+          "status": "RECRUITING",
+          "city": "M\u00fclheim",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 51.43218,
+            "lon": 6.87967
+          }
+        },
+        {
+          "facility": "MVZ f\u00fcr H\u00e4matologie und Onkologie",
+          "status": "RECRUITING",
+          "city": "Ravensburg",
+          "zip": "88212",
+          "country": "Germany",
+          "contacts": [
+            {
+              "name": "Thomas Decker, Prof.",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 47.78198,
+            "lon": 9.61062
+          }
+        },
+        {
+          "facility": "Krankenhaus Barmherzige Br\u00fcder Regensburg",
+          "status": "RECRUITING",
+          "city": "Regensburg",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 49.01513,
+            "lon": 12.10161
+          }
+        },
+        {
+          "facility": "Onkologisch-Gastroenterologische Schwerpunktpraxis Innere Medizin GbR",
+          "status": "RECRUITING",
+          "city": "Singen",
+          "zip": "78224",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 47.75935,
+            "lon": 8.8403
+          }
+        },
+        {
+          "facility": "Onkologiezentrum Soest-Iserlohn",
+          "status": "RECRUITING",
+          "city": "Soest",
+          "zip": "59494",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 51.57558,
+            "lon": 8.10619
+          }
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "NO",
+      "description": "No IPD will be shared"
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-06-12"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D001943",
+          "term": "Breast Neoplasms"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D009371",
+          "term": "Neoplasms by Site"
+        },
+        {
+          "id": "D009369",
+          "term": "Neoplasms"
+        },
+        {
+          "id": "D001941",
+          "term": "Breast Diseases"
+        },
+        {
+          "id": "D012871",
+          "term": "Skin Diseases"
+        },
+        {
+          "id": "D017437",
+          "term": "Skin and Connective Tissue Diseases"
+        }
+      ]
+    },
+    "interventionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D004364",
+          "term": "Pharmaceutical Preparations"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}

@@ -1,0 +1,28 @@
+# ---- secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- python ----
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+
+# ---- node / frontend ----
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+*.tsbuildinfo
+
+# ---- runtime / ephemeral artifacts ----
+data/cache/agent_results/
+run_id.txt
+test_run_id.txt
+*.jsonl
+
+# ---- editor / OS ----
+.DS_Store
+Thumbs.db

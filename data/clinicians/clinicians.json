@@ -1,0 +1,14 @@
+[
+  {
+    "clinicianId": "DR_MEHTA",
+    "name": "Dr. A. Mehta",
+    "site": "Apollo Site",
+    "role": "Oncologist"
+  },
+  {
+    "clinicianId": "COORD_RAO",
+    "name": "S. Rao",
+    "site": "Apollo Site",
+    "role": "Trial Coordinator"
+  }
+]

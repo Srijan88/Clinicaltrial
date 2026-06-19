@@ -1,0 +1,21 @@
+{
+  "patientId": "P002",
+  "age": 47,
+  "sex": "female",
+  "diagnosis": "Metastatic triple-negative breast cancer",
+  "stage": "IV",
+  "er_status": "negative",
+  "pr_status": "negative",
+  "her2_status": "zero",
+  "ar_status": "negative",
+  "ecog": 3,
+  "labs": { "anc": 1.1, "hgb": 9.4, "platelets": 95 },
+  "priorTherapies": [
+    { "drug": "paclitaxel", "line": 1, "endDate": "2026-03-01" },
+    { "drug": "capecitabine", "line": 2, "endDate": "2026-05-20" }
+  ],
+  "on_cdk46_inhibitor": false,
+  "durable_disease_control": false,
+  "brainMets": true,
+  "location": "Delhi, IN"
+}

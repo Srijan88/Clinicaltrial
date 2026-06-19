@@ -1,0 +1,30 @@
+{
+  "HR": {
+    "label": "Hormone Receptor (HR) status",
+    "explanation": "Hormone receptor status is a combined read of the estrogen receptor (ER) and progesterone receptor (PR). A tumor is called HR-positive if either ER or PR is positive. HR-positive breast cancers are driven in part by hormones, which is why they often respond to endocrine (anti-hormone) therapies such as aromatase inhibitors, tamoxifen, or fulvestrant, frequently combined with a CDK4/6 inhibitor in the metastatic setting."
+  },
+  "ER": {
+    "label": "Estrogen Receptor (ER)",
+    "explanation": "The estrogen receptor is a protein on breast cancer cells that binds estrogen and can fuel tumor growth. ER-positive tumors are candidates for endocrine therapy. ER status is measured by immunohistochemistry (IHC); even low positive percentages are generally reported as ER-positive."
+  },
+  "PR": {
+    "label": "Progesterone Receptor (PR)",
+    "explanation": "The progesterone receptor is a hormone receptor measured alongside ER. PR positivity reinforces that a tumor is hormonally driven. A tumor that is ER-negative AND PR-negative AND not HER2-positive is classified as triple-negative."
+  },
+  "HER2": {
+    "label": "HER2 (human epidermal growth factor receptor 2)",
+    "explanation": "HER2 is a growth-promoting protein. Classically tumors were split into HER2-positive (overexpressed/amplified, eligible for HER2-targeted drugs such as trastuzumab) versus HER2-negative. HER2 is scored by IHC (0, 1+, 2+, 3+) and, when IHC is 2+, confirmed by in-situ hybridization (ISH) for gene amplification. IHC 3+ (or 2+/ISH-amplified) is HER2-positive."
+  },
+  "HER2_low": {
+    "label": "HER2-low",
+    "explanation": "HER2-low is a newer category that sits between classic HER2-positive and HER2-zero. It is defined as IHC 1+, OR IHC 2+ with a NON-amplified (negative) ISH result. HER2-low tumors do not respond to traditional HER2 therapies but DO respond to certain antibody-drug conjugates (e.g. trastuzumab deruxtecan). Recognizing HER2-low matters because such patients are now eligible for trials and treatments they would previously have been excluded from."
+  },
+  "HER2_zero": {
+    "label": "HER2-zero (HER2 IHC 0)",
+    "explanation": "HER2-zero means an IHC score of 0 with no detectable HER2 expression. These tumors are HER2-negative in the strict sense and are not eligible for HER2-directed therapy or HER2-low antibody-drug conjugate trials."
+  },
+  "AR": {
+    "label": "Androgen Receptor (AR)",
+    "explanation": "The androgen receptor is a hormone receptor expressed in a subset of breast cancers, including some triple-negative tumors (the 'luminal androgen receptor' subtype). AR-positive triple-negative breast cancer can be a target for anti-androgen strategies, so AR status is used to select patients for specific trials such as AR-directed combinations."
+  }
+}

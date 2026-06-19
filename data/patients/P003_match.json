@@ -1,0 +1,21 @@
+{
+  "patientId": "P003",
+  "age": 63,
+  "sex": "female",
+  "diagnosis": "Metastatic HER2-positive breast cancer",
+  "stage": "IV",
+  "er_status": "positive",
+  "pr_status": "negative",
+  "her2_status": "positive",
+  "ar_status": "positive",
+  "ecog": 1,
+  "labs": { "anc": 2.8, "hgb": 11.9, "platelets": 180 },
+  "priorTherapies": [
+    { "drug": "fulvestrant", "line": 1, "endDate": "2026-05-26" }
+  ],
+  "on_cdk46_inhibitor": false,
+  "durable_disease_control": false,
+  "brainMets": false,
+  "location": "Bengaluru, IN",
+  "_note": "HER2 IHC 3+ confirmed positive. Last systemic therapy ended 2026-05-26 (~18 days before reference date 2026-06-13)."
+}

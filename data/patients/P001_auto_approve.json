@@ -1,0 +1,21 @@
+{
+  "patientId": "P001",
+  "age": 58,
+  "sex": "female",
+  "diagnosis": "Metastatic adenocarcinoma of the breast",
+  "stage": "IV",
+  "er_status": "positive",
+  "pr_status": "positive",
+  "her2_status": "zero",
+  "ar_status": "positive",
+  "ecog": 1,
+  "labs": { "anc": 3.2, "hgb": 12.8, "platelets": 240 },
+  "priorTherapies": [
+    { "drug": "letrozole", "line": 1, "endDate": null },
+    { "drug": "palbociclib", "line": 1, "endDate": null }
+  ],
+  "on_cdk46_inhibitor": true,
+  "durable_disease_control": true,
+  "brainMets": false,
+  "location": "Mumbai, IN"
+}

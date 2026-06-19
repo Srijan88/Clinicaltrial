@@ -1,0 +1,13 @@
+# Railway deploy config for the backend (API + 4 Band agents in one service).
+# Build uses Nixpacks auto-detection: it sees pyproject.toml and installs the
+# project (and its dependencies) with pip.
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "python serve_all.py"
+healthcheckPath = "/api/v1/health"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
