@@ -5,6 +5,26 @@ import { setClinician } from "../session";
 import type { Clinician } from "../types";
 import { Logo } from "../components/Brand";
 
+/** Landing-page-only brand mark: the dark 3D cross-on-hand render. Kept local
+ * to this page on purpose — the shared <Logo> (used elsewhere + favicon) is
+ * unchanged. */
+function LandingLogo({ size = 36 }: { size?: number }) {
+  return (
+    <span
+      className="inline-flex items-center justify-center overflow-hidden rounded-xl ring-1 ring-white/20 shadow-sm"
+      style={{ width: size, height: size }}
+      aria-label="ClinicalTrials"
+    >
+      <img
+        src="/landing-logo.png"
+        alt=""
+        className="h-full w-full object-cover"
+        draggable={false}
+      />
+    </span>
+  );
+}
+
 export default function Login() {
   const navigate = useNavigate();
   const [clinicians, setClinicians] = useState<Clinician[]>([]);
@@ -30,7 +50,6 @@ export default function Login() {
   return (
     <div className="relative min-h-[100dvh] w-full overflow-hidden text-white">
       <AuroraBackdrop />
-      <AgentNetwork />
 
       {/* foreground shell */}
       <div className="relative z-10 flex min-h-[100dvh] flex-col">
@@ -42,14 +61,44 @@ export default function Login() {
 
           {/* centered focal sign-in */}
           <div className="relative w-full max-w-[400px]">
-            <div className="mb-4 flex justify-center animate-fade-in-up">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[12px] font-medium text-white/80 ring-1 ring-white/15 backdrop-blur">
-                <span className="relative flex h-1.5 w-1.5">
+            <div className="mb-6 flex justify-center animate-fade-in-up">
+              <div
+                className="halo-breathe pill-pan relative inline-flex items-center gap-3 rounded-full px-5 py-3 ring-1 ring-white/25 backdrop-blur-md"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(90deg, rgba(56,189,248,0.22), rgba(255,255,255,0.10) 50%, rgba(16,185,129,0.22))",
+                }}
+              >
+                {/* Live indicator — emerald dot with a slow ping. */}
+                <span className="relative flex h-2 w-2 shrink-0">
                   <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75 animate-ping" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-300" />
                 </span>
-                Agentic clinical trial matching
-              </span>
+
+                {/* Headline — soft sheen travels through the text. */}
+                <span className="text-shine whitespace-nowrap text-[15px] font-semibold tracking-tight">
+                  Agentic clinical trial matching
+                </span>
+
+                {/* Four agent dots fire in sequence to dramatize the pipeline.
+                    Hidden on very small screens to keep the pill from wrapping. */}
+                <span className="hidden items-center gap-1 border-l border-white/20 pl-3 sm:flex">
+                  {[
+                    "bg-blue-300",
+                    "bg-violet-300",
+                    "bg-cyan-300",
+                    "bg-emerald-300",
+                  ].map((c, i) => (
+                    <span
+                      key={i}
+                      className={"h-1.5 w-1.5 rounded-full " + c}
+                      style={{
+                        animation: `seq-pulse 1.6s var(--ease-in-out) ${i * 0.18}s infinite`,
+                      }}
+                    />
+                  ))}
+                </span>
+              </div>
             </div>
 
             <SignInCard
@@ -172,11 +221,7 @@ function TopNav() {
   return (
     <header className="flex items-center justify-between px-6 py-6 sm:px-10 animate-fade-in-up">
       <div className="flex items-center gap-2.5">
-        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/20 backdrop-blur">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round">
-            <path d="M2 12h4l2.5-7 4 14 2.5-7H22" />
-          </svg>
-        </span>
+        <LandingLogo size={36} />
         <span className="text-[17px] font-semibold tracking-tight">ClinicalTrials</span>
       </div>
       <div className="flex items-center gap-2.5">
@@ -201,7 +246,7 @@ function TopNav() {
 function FramingChips() {
   return (
     <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden>
-      <GlassChip className="left-[8%] top-[26%] chip-float [animation-delay:0s]" delay="120ms">
+      <GlassChip side="left" className="left-[7%] top-[26%] chip-float [animation-delay:0s]" delay="120ms">
         <div className="flex items-center gap-3">
           <AgentDots />
           <div>
@@ -211,12 +256,12 @@ function FramingChips() {
         </div>
       </GlassChip>
 
-      <GlassChip className="left-[6%] bottom-[20%] chip-float [animation-delay:1.5s]" delay="220ms">
+      <GlassChip side="left" className="left-[7%] bottom-[22%] chip-float [animation-delay:1.5s]" delay="220ms">
         <div className="text-[18px] font-bold leading-none">100%</div>
         <div className="mt-1 text-[11px] text-white/65">deterministic verdicts</div>
       </GlassChip>
 
-      <GlassChip className="right-[7%] top-[24%] chip-float [animation-delay:0.8s]" delay="180ms">
+      <GlassChip side="right" className="right-[7%] top-[26%] chip-float [animation-delay:0.8s]" delay="180ms">
         <div className="flex items-center gap-2 text-[13px] font-semibold">
           <span className="h-2 w-2 rounded-full bg-emerald-300" />
           Stage IV matching
@@ -224,7 +269,7 @@ function FramingChips() {
         <div className="mt-1 text-[11px] text-white/65">metastatic breast cancer</div>
       </GlassChip>
 
-      <GlassChip className="right-[9%] bottom-[22%] chip-float [animation-delay:2.2s]" delay="280ms">
+      <GlassChip side="right" className="right-[7%] bottom-[22%] chip-float [animation-delay:2.2s]" delay="280ms">
         <div className="text-[13px] font-semibold">Every run reproducible</div>
         <div className="mt-1 text-[11px] text-white/65">auditable rationale trail</div>
       </GlassChip>
@@ -236,20 +281,51 @@ function GlassChip({
   children,
   className = "",
   delay = "0ms",
+  side = "left",
 }: {
   children: React.ReactNode;
   className?: string;
   delay?: string;
+  side?: "left" | "right";
 }) {
   return (
     <div className={"absolute " + className}>
       <div
-        className="rise-in rounded-2xl bg-white/10 px-4 py-3 ring-1 ring-white/15 backdrop-blur-md shadow-[0_18px_40px_-20px_rgba(0,0,0,0.5)]"
+        className="rise-in relative rounded-2xl bg-white/10 px-4 py-3 ring-1 ring-white/15 backdrop-blur-md shadow-[0_18px_40px_-20px_rgba(0,0,0,0.5)]"
         style={{ animationDelay: delay }}
       >
+        <ChipConnector side={side} />
         {children}
       </div>
     </div>
+  );
+}
+
+/* A short line + glowing node that visually tethers each floating chip toward
+   the central login card. The node (the "pointer") sits on the center-facing
+   end of the line; the other end meets the card edge. */
+function ChipConnector({ side }: { side: "left" | "right" }) {
+  const isLeft = side === "left";
+  return (
+    <span
+      className={
+        "pointer-events-none absolute top-1/2 hidden -translate-y-1/2 items-center lg:flex " +
+        (isLeft ? "left-full flex-row" : "right-full flex-row-reverse")
+      }
+    >
+      <span
+        className={
+          "h-[2px] w-16 rounded-full " +
+          (isLeft
+            ? "bg-gradient-to-r from-white/40 to-sky-300/0"
+            : "bg-gradient-to-l from-white/40 to-sky-300/0")
+        }
+      />
+      <span className="relative flex h-3 w-3 items-center justify-center">
+        <span className="absolute h-3 w-3 rounded-full bg-sky-300/60 animate-ping" />
+        <span className="relative h-2 w-2 rounded-full bg-sky-200 shadow-[0_0_8px_2px_rgba(125,211,252,0.75)]" />
+      </span>
+    </span>
   );
 }
 
@@ -280,16 +356,18 @@ function PipelineRail() {
     <footer className="relative z-10 px-6 pb-8 pt-2 animate-fade-in-up [animation-delay:120ms]">
       <div className="mx-auto max-w-[460px]">
         <div className="relative">
-          {/* base track */}
-          <div className="absolute left-6 right-6 top-[18px] h-[2px] rounded-full bg-white/15" />
+          {/* base track — spans exactly from the first node center to the last
+              (12.5% inset matches the center of each grid-cols-4 cell), so the
+              line never runs past the outer circles */}
+          <div className="absolute left-[12.5%] right-[12.5%] top-[18px] h-[2px] rounded-full bg-white/15" />
           {/* traveling light packet along the rail */}
-          <div className="absolute left-6 right-6 top-[18px] h-[2px]">
+          <div className="absolute left-[12.5%] right-[12.5%] top-[18px] h-[2px]">
             <span className="packet absolute top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_12px_3px_rgba(255,255,255,0.7)]" />
           </div>
 
-          <div className="relative flex items-start justify-between">
+          <div className="relative grid grid-cols-4">
             {agents.map((a) => (
-              <div key={a.label} className="flex w-[24%] flex-col items-center gap-2">
+              <div key={a.label} className="flex flex-col items-center gap-2">
                 <span className="node-glow relative flex h-9 w-9 items-center justify-center rounded-full bg-white/12 ring-1 ring-white/25 backdrop-blur">
                   <span className={"h-2.5 w-2.5 rounded-full " + a.dot} />
                 </span>
@@ -349,48 +427,5 @@ function AuroraBackdrop() {
         }}
       />
     </div>
-  );
-}
-
-/* A faint living agent constellation drawn across the whole backdrop:
-   nodes connected by flowing dashed currents. Purely decorative depth that
-   reinforces the "agents working" story. Collapses under reduced-motion. */
-function AgentNetwork() {
-  return (
-    <svg
-      className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.5]"
-      preserveAspectRatio="xMidYMid slice"
-      viewBox="0 0 1200 700"
-      fill="none"
-      aria-hidden
-    >
-      <defs>
-        <linearGradient id="netStroke" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#7dd3fc" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#6ee7b7" stopOpacity="0.4" />
-        </linearGradient>
-      </defs>
-
-      {/* connectors */}
-      <g stroke="url(#netStroke)" strokeWidth="1.4">
-        <path className="flow-line" d="M150 140 L420 250" />
-        <path className="flow-line" style={{ animationDelay: "0.3s" }} d="M420 250 L300 460" />
-        <path className="flow-line" style={{ animationDelay: "0.6s" }} d="M420 250 L760 180" />
-        <path className="flow-line" style={{ animationDelay: "0.2s" }} d="M760 180 L1040 300" />
-        <path className="flow-line" style={{ animationDelay: "0.5s" }} d="M760 180 L880 470" />
-        <path className="flow-line" style={{ animationDelay: "0.8s" }} d="M300 460 L640 560" />
-        <path className="flow-line" style={{ animationDelay: "0.4s" }} d="M880 470 L640 560" />
-      </g>
-
-      {/* nodes */}
-      <g>
-        {[
-          [150, 140], [420, 250], [300, 460], [760, 180],
-          [1040, 300], [880, 470], [640, 560],
-        ].map(([x, y], i) => (
-          <circle key={i} cx={x} cy={y} r="3.5" fill="#bae6fd" opacity="0.85" />
-        ))}
-      </g>
-    </svg>
   );
 }
