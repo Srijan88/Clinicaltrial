@@ -55,13 +55,13 @@ export default function Login() {
       <div className="relative z-10 flex min-h-[100dvh] flex-col">
         <TopNav />
 
-        <main className="relative flex flex-1 items-center justify-center px-6 py-6">
+        <main className="relative flex flex-1 items-center justify-center px-6 py-3">
           {/* framing glass chips — decorative, never crowd the card, desktop only */}
           <FramingChips />
 
           {/* centered focal sign-in */}
           <div className="relative w-full max-w-[400px]">
-            <div className="mb-6 flex justify-center animate-fade-in-up">
+            <div className="mb-4 flex justify-center animate-fade-in-up">
               <div
                 className="halo-breathe pill-pan relative inline-flex items-center gap-3 rounded-full px-5 py-3 ring-1 ring-white/25 backdrop-blur-md"
                 style={{
@@ -141,7 +141,7 @@ function SignInCard({
             "linear-gradient(135deg, rgba(56,189,248,0.35), rgba(16,185,129,0.25))",
         }}
       />
-      <div className="relative overflow-hidden rounded-3xl bg-white/95 p-7 shadow-[0_30px_80px_-24px_rgba(2,12,40,0.7)] ring-1 ring-white/50 backdrop-blur-xl">
+      <div className="relative overflow-hidden rounded-3xl bg-white/95 p-6 shadow-[0_30px_80px_-24px_rgba(2,12,40,0.7)] ring-1 ring-white/50 backdrop-blur-xl">
         {/* gradient accent edge at the top */}
         <span
           className="absolute inset-x-0 top-0 h-[3px]"
@@ -158,7 +158,7 @@ function SignInCard({
           </span>
         </div>
 
-        <h1 className="mt-5 text-[22px] font-semibold tracking-tight text-slate-900">
+        <h1 className="mt-4 text-[22px] font-semibold tracking-tight text-slate-900">
           Welcome back
         </h1>
         <p className="mt-1 text-sm leading-relaxed text-slate-500">
@@ -171,7 +171,7 @@ function SignInCard({
           </div>
         )}
 
-        <label className="mb-1.5 mt-6 block text-[13px] font-medium text-slate-700">
+        <label className="mb-1.5 mt-5 block text-[13px] font-medium text-slate-700">
           Continue as
         </label>
         <div className="relative">
@@ -201,12 +201,12 @@ function SignInCard({
         <button
           onClick={signIn}
           disabled={!selected}
-          className="btn-primary mt-7 w-full rounded-xl px-4 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
+          className="btn-primary mt-5 w-full rounded-xl px-4 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
         >
           Enter workspace
         </button>
 
-        <div className="mt-5 flex items-center gap-3 text-[11px] text-slate-400">
+        <div className="mt-4 flex items-center gap-3 text-[11px] text-slate-400">
           <span className="h-px flex-1 bg-slate-200" />
           <span>secured · synthetic data · no PHI</span>
           <span className="h-px flex-1 bg-slate-200" />
@@ -219,7 +219,7 @@ function SignInCard({
 /* ============================ top navigation ============================ */
 function TopNav() {
   return (
-    <header className="flex items-center justify-between px-6 py-6 sm:px-10 animate-fade-in-up">
+    <header className="flex items-center justify-between px-6 py-4 sm:px-10 animate-fade-in-up">
       <div className="flex items-center gap-2.5">
         <LandingLogo size={36} />
         <span className="text-[17px] font-semibold tracking-tight">ClinicalTrials</span>
@@ -248,10 +248,10 @@ function FramingChips() {
     <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden>
       <GlassChip side="left" className="left-[7%] top-[26%] chip-float [animation-delay:0s]" delay="120ms">
         <div className="flex items-center gap-3">
-          <AgentDots />
+          <ProviderBadges />
           <div>
             <div className="text-[18px] font-bold leading-none">4 agents</div>
-            <div className="mt-1 text-[11px] text-white/65">reasoning in concert</div>
+            <div className="mt-1 text-[11px] text-white/65">3× Featherless · 1× AI/ML</div>
           </div>
         </div>
       </GlassChip>
@@ -301,46 +301,91 @@ function GlassChip({
   );
 }
 
-/* A short line + glowing node that visually tethers each floating chip toward
-   the central login card. The node (the "pointer") sits on the center-facing
-   end of the line; the other end meets the card edge. */
+/* A visible line that connects each floating chip to the central login card.
+   The line runs long enough that its center end tucks under the card (so it
+   reads as attached to the card), and a packet of light flows OUTWARD from the
+   card to the chip. The pulsing pointer node sits at the chip edge. */
 function ChipConnector({ side }: { side: "left" | "right" }) {
   const isLeft = side === "left";
   return (
     <span
       className={
-        "pointer-events-none absolute top-1/2 hidden -translate-y-1/2 items-center lg:flex " +
-        (isLeft ? "left-full flex-row" : "right-full flex-row-reverse")
+        "pointer-events-none absolute top-1/2 hidden h-[2px] w-[clamp(120px,22vw,260px)] -translate-y-1/2 lg:block " +
+        (isLeft ? "left-full" : "right-full")
       }
     >
+      {/* the connecting line — brightest at the card (center) end */}
       <span
         className={
-          "h-[2px] w-16 rounded-full " +
+          "absolute inset-0 rounded-full " +
           (isLeft
-            ? "bg-gradient-to-r from-white/40 to-sky-300/0"
-            : "bg-gradient-to-l from-white/40 to-sky-300/0")
+            ? "bg-gradient-to-r from-sky-300/40 via-sky-300/60 to-sky-200/85"
+            : "bg-gradient-to-l from-sky-300/40 via-sky-300/60 to-sky-200/85")
         }
       />
-      <span className="relative flex h-3 w-3 items-center justify-center">
-        <span className="absolute h-3 w-3 rounded-full bg-sky-300/60 animate-ping" />
-        <span className="relative h-2 w-2 rounded-full bg-sky-200 shadow-[0_0_8px_2px_rgba(125,211,252,0.75)]" />
+      {/* pulsing pointer node anchored at the chip edge */}
+      <span
+        className={
+          "absolute top-1/2 flex h-3 w-3 -translate-y-1/2 items-center justify-center " +
+          (isLeft ? "left-0 -translate-x-1/2" : "right-0 translate-x-1/2")
+        }
+      >
+        <span className="absolute h-3 w-3 rounded-full bg-sky-300/55 animate-ping" />
+        <span className="relative h-2 w-2 rounded-full bg-sky-200 shadow-[0_0_8px_2px_rgba(125,211,252,0.8)]" />
       </span>
+      {/* packet of light flowing OUT from the card toward the chip */}
+      <span
+        className={
+          "absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-white shadow-[0_0_8px_2px_rgba(255,255,255,0.85)] " +
+          (isLeft ? "flow-left" : "flow-right")
+        }
+      />
     </span>
   );
 }
 
-function AgentDots() {
-  const colors = ["bg-blue-300", "bg-violet-300", "bg-cyan-300", "bg-emerald-300"];
+/* The four agents shown as their model providers: three Featherless (intake,
+   discoverer, parser) + one AI/ML API (analyzer), matching agent_config.yaml. */
+function ProviderBadges() {
   return (
-    <div className="flex -space-x-1.5">
-      {colors.map((c, i) => (
-        <span
-          key={i}
-          className={"h-6 w-6 rounded-full ring-2 ring-white/20 " + c}
-          style={{ opacity: 0.9 }}
-        />
-      ))}
+    <div className="flex -space-x-2">
+      <ProviderMark kind="featherless" z={4} />
+      <ProviderMark kind="featherless" z={3} />
+      <ProviderMark kind="featherless" z={2} />
+      <ProviderMark kind="aiml" z={1} />
     </div>
+  );
+}
+
+function ProviderMark({
+  kind,
+  z = 0,
+}: {
+  kind: "featherless" | "aiml";
+  z?: number;
+}) {
+  const isF = kind === "featherless";
+  return (
+    <span
+      title={isF ? "Featherless · Qwen2.5-32B" : "AI/ML API · gpt-4o-mini"}
+      style={{ zIndex: z }}
+      className={
+        "relative flex h-7 w-7 items-center justify-center rounded-lg shadow-sm ring-2 ring-[#152353] " +
+        (isF
+          ? "bg-gradient-to-br from-indigo-400 to-sky-500 text-white"
+          : "bg-gradient-to-br from-emerald-400 to-teal-500 text-white")
+      }
+    >
+      {isF ? (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+          <path d="M16 8 2 22" />
+          <path d="M17.5 15H9" />
+        </svg>
+      ) : (
+        <span className="text-[9px] font-extrabold leading-none tracking-tight">AI</span>
+      )}
+    </span>
   );
 }
 
@@ -353,7 +398,7 @@ function PipelineRail() {
     { label: "Analysis", dot: "bg-emerald-300" },
   ];
   return (
-    <footer className="relative z-10 px-6 pb-8 pt-2 animate-fade-in-up [animation-delay:120ms]">
+    <footer className="relative z-10 px-6 pb-5 pt-1 animate-fade-in-up [animation-delay:120ms]">
       <div className="mx-auto max-w-[460px]">
         <div className="relative">
           {/* base track — spans exactly from the first node center to the last
