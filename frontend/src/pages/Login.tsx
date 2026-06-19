@@ -55,7 +55,7 @@ export default function Login() {
       <div className="relative z-10 flex min-h-[100dvh] flex-col">
         <TopNav />
 
-        <main className="relative flex flex-1 items-center justify-center px-6 py-3">
+        <main className="relative flex flex-1 items-center justify-center px-4 py-3 sm:px-6">
           {/* framing glass chips — decorative, never crowd the card, desktop only */}
           <FramingChips />
 
@@ -63,7 +63,7 @@ export default function Login() {
           <div className="relative w-full max-w-[400px]">
             <div className="mb-4 flex justify-center animate-fade-in-up">
               <div
-                className="halo-breathe pill-pan relative inline-flex items-center gap-3 rounded-full px-5 py-3 ring-1 ring-white/25 backdrop-blur-md"
+                className="halo-breathe pill-pan relative inline-flex max-w-full items-center gap-2.5 rounded-full px-4 py-2.5 ring-1 ring-white/25 backdrop-blur-md sm:gap-3 sm:px-5 sm:py-3"
                 style={{
                   backgroundImage:
                     "linear-gradient(90deg, rgba(56,189,248,0.22), rgba(255,255,255,0.10) 50%, rgba(16,185,129,0.22))",
@@ -76,7 +76,7 @@ export default function Login() {
                 </span>
 
                 {/* Headline — soft sheen travels through the text. */}
-                <span className="text-shine whitespace-nowrap text-[15px] font-semibold tracking-tight">
+                <span className="text-shine whitespace-nowrap text-[13px] font-semibold tracking-tight sm:text-[15px]">
                   Agentic clinical trial matching
                 </span>
 
@@ -141,7 +141,7 @@ function SignInCard({
             "linear-gradient(135deg, rgba(56,189,248,0.35), rgba(16,185,129,0.25))",
         }}
       />
-      <div className="relative overflow-hidden rounded-3xl bg-white/95 p-6 shadow-[0_30px_80px_-24px_rgba(2,12,40,0.7)] ring-1 ring-white/50 backdrop-blur-xl">
+      <div className="relative overflow-hidden rounded-2xl bg-white/95 p-5 shadow-[0_30px_80px_-24px_rgba(2,12,40,0.7)] ring-1 ring-white/50 backdrop-blur-xl sm:rounded-3xl sm:p-6">
         {/* gradient accent edge at the top */}
         <span
           className="absolute inset-x-0 top-0 h-[3px]"
@@ -219,7 +219,7 @@ function SignInCard({
 /* ============================ top navigation ============================ */
 function TopNav() {
   return (
-    <header className="flex items-center justify-between px-6 py-4 sm:px-10 animate-fade-in-up">
+    <header className="flex items-center justify-between px-4 py-4 sm:px-10 animate-fade-in-up">
       <div className="flex items-center gap-2.5">
         <LandingLogo size={36} />
         <span className="text-[17px] font-semibold tracking-tight">ClinicalTrials</span>
@@ -398,7 +398,7 @@ function PipelineRail() {
     { label: "Analysis", dot: "bg-emerald-300" },
   ];
   return (
-    <footer className="relative z-10 px-6 pb-5 pt-1 animate-fade-in-up [animation-delay:120ms]">
+    <footer className="relative z-10 px-4 pb-5 pt-1 animate-fade-in-up [animation-delay:120ms] sm:px-6">
       <div className="mx-auto max-w-[460px]">
         <div className="relative">
           {/* base track — spans exactly from the first node center to the last

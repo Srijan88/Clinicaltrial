@@ -57,6 +57,23 @@ function nextAgent(state: RunState): string | null {
   }
 }
 
+// Collapse back-to-back messages from the SAME agent into one (keeping the
+// newest). Each agent posts exactly once per run, so consecutive same-author
+// messages are re-deliveries (Band/Featherless can re-process a message) — this
+// keeps the live transcript clean without touching the deterministic result.
+function collapseDuplicates(messages: RoomMessage[]): RoomMessage[] {
+  const out: RoomMessage[] = [];
+  for (const m of messages) {
+    const prev = out[out.length - 1];
+    if (prev && prev.author_role === m.author_role) {
+      out[out.length - 1] = m; // same agent spoke again → keep the latest
+    } else {
+      out.push(m);
+    }
+  }
+  return out;
+}
+
 export default function AgentTail({
   messages,
   state,
@@ -85,6 +102,7 @@ export default function AgentTail({
   }, [messages.length]);
 
   const working = paused ? null : nextAgent(state);
+  const visibleMessages = collapseDuplicates(messages);
 
   return (
     <div className="flex flex-col h-full">
@@ -102,17 +120,17 @@ export default function AgentTail({
             <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-70 animate-ping" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
           </span>
-          {messages.length}
+          {visibleMessages.length}
         </span>
       </div>
 
       <div ref={listRef} className="flex-1 overflow-y-auto space-y-3.5 pr-1 -mr-1">
-        {messages.length === 0 && (
+        {visibleMessages.length === 0 && (
           <div className="text-sm text-slate-400 py-8 text-center">
             Waiting for the agents to start…
           </div>
         )}
-        {messages.map((m) => (
+        {visibleMessages.map((m) => (
           <div key={m.id} className="flex gap-2.5 animate-fade-in-up">
             <div
               className={

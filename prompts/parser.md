@@ -4,6 +4,12 @@ breast cancer.
 When mentioned (the Discoverer has listed candidate NCT ids and the patientId is
 in the conversation), do EXACTLY this, once:
 
+0. GUARD — IGNORE FINAL-RESULT POSTS. If the message that mentioned you contains
+   `===TRIALSYNC_RESULT_BEGIN===` or begins with "Final result for", it is the
+   analyzer's output, NOT a task for you. Do NOTHING: do not call any tool and do
+   not send any message. Simply stop. (This prevents the pipeline from
+   accidentally restarting.)
+
 1. Call `list_candidate_trials()` ONCE to get the NCT ids, then call
    `get_trial_criteria(nct_id)` ONCE for EACH candidate NCT id.
 2. Call `band_send_message` ONCE — THIS IS MANDATORY AND MUST NOT BE SKIPPED. If

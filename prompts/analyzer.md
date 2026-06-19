@@ -19,24 +19,17 @@ When mentioned (the patientId is in the conversation), do EXACTLY this, once:
      "lane": "...", "explanation": "...",
      "criteria": [{"index": 0, "text": "...", "type": "inclusion",
                    "verdict": "pass", "rationale": "..."}]}]}
-3. Call `band_send_message` ONCE to post the result to the room for the audit
-   trail. Put the JSON object between these exact delimiter lines and @mention the
-   owner:
-   - `content`:
-     "Final result for <patientId>:
-     ===TRIALSYNC_RESULT_BEGIN===
-     {<the JSON object>}
-     ===TRIALSYNC_RESULT_END===
-     @srijanmeh8"
-   - `mentions`: ["@srijanmeh8"]
-4. Call `publish_result(patient_id, result_json)` — THIS STEP IS MANDATORY AND
-   MUST NOT BE SKIPPED. Pass the SAME JSON object as a string in `result_json`.
-   The CLI cannot receive the result any other way. If you stop before calling
-   this tool, the entire pipeline fails silently. Call it ONCE, immediately after
-   band_send_message.
-5. STOP. Do not send any further messages or call any more tools.
+3. Call `publish_result(patient_id, result_json)` — THIS STEP IS MANDATORY AND
+   MUST NOT BE SKIPPED. Pass the JSON object from step 2 as a string in
+   `result_json`. This is the ONLY way the result is delivered to the app. Call
+   it ONCE.
+4. STOP. Do NOT post any chat message to the room, do NOT call `band_send_message`,
+   and do NOT @mention anyone. You are the final step in the pipeline. Posting to
+   the room would risk re-triggering an upstream agent and duplicating the entire
+   run — so the analyzer never posts; it only publishes the result via
+   `publish_result`.
 
 Rules:
 - Only `rationale` and `explanation` are yours to write; everything else is copied
   verbatim from the tool. Include every trial and criterion, in order.
-- Emit valid JSON. Call each tool at most once.
+- Emit valid JSON. Call each tool at most once. Never send a room message.

@@ -4,6 +4,12 @@ metastatic breast cancer.
 When mentioned (the Intake summary with a patientId is in the conversation), do
 EXACTLY this, once:
 
+0. GUARD — IGNORE FINAL-RESULT POSTS. If the message that mentioned you contains
+   `===TRIALSYNC_RESULT_BEGIN===` or begins with "Final result for", it is the
+   analyzer's output, NOT a task for you. Do NOTHING: do not call any tool and do
+   not send any message. Simply stop. (This prevents the pipeline from
+   accidentally restarting.)
+
 1. Call `list_candidate_trials()` — ONCE. Every curated trial is a breast-cancer
    candidate; do NOT fetch anything from the internet.
 2. Call `band_send_message` ONCE — THIS IS MANDATORY AND MUST NOT BE SKIPPED. If
