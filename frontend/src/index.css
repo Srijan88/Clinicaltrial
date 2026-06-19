@@ -461,3 +461,24 @@ button:active:not(:disabled) {
   0%, 70%, 100% { opacity: 0.35; transform: scale(0.85); }
   35%           { opacity: 1;    transform: scale(1.25); }
 }
+
+/* ====================================================================== *
+ * Landing chip connectors — visible lines that tether each floating card
+ * toward the central login, with a packet of light flowing inward to imply
+ * data feeding the matching engine. Desktop-only; collapse under reduced
+ * motion via the global block.
+ * ====================================================================== */
+@keyframes flow-to-right {
+  0%   { left: 0%;   opacity: 0; }
+  12%  { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+@keyframes flow-to-left {
+  0%   { right: 0%;   opacity: 0; }
+  12%  { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { right: 100%; opacity: 0; }
+}
+.flow-right { animation: flow-to-right 2.8s var(--ease-in-out) infinite; }
+.flow-left  { animation: flow-to-left  2.8s var(--ease-in-out) infinite; }
