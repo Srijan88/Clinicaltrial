@@ -6,7 +6,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "python serve_all.py"
+startCommand = "/opt/venv/bin/python serve_all.py"
 healthcheckPath = "/api/v1/health"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"

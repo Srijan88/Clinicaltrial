@@ -1,0 +1,20 @@
+# Explicit Nixpacks build for Railway.
+#
+# Why this file exists: Nixpacks' default Python provider tries to install
+# uv via `pip install uv==$NIXPACKS_UV_VERSION`. On the current Railway
+# image that env var is empty, so the command becomes `pip install uv==`,
+# which fails with "Invalid requirement: 'uv=='". This config skips uv
+# entirely and installs the project with plain pip from pyproject.toml
+# (hatchling backend handles the build natively).
+
+[phases.setup]
+nixPkgs = ["python311", "gcc"]
+
+[phases.install]
+cmds = [
+  "python -m venv --copies /opt/venv",
+  ". /opt/venv/bin/activate && pip install --upgrade pip && pip install ."
+]
+
+[start]
+cmd = "/opt/venv/bin/python serve_all.py"
