@@ -531,9 +531,17 @@ ALLOWED_ORIGINS = [
     if o.strip()
 ]
 
+# Vercel serves the frontend on several hostnames (production alias + per-deploy
+# + git-branch preview URLs), so match every *.vercel.app origin via regex
+# rather than listing each one. Override with ALLOWED_ORIGIN_REGEX if needed.
+ALLOWED_ORIGIN_REGEX = os.environ.get(
+    "ALLOWED_ORIGIN_REGEX", r"https://.*\.vercel\.app"
+)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
+    allow_origin_regex=ALLOWED_ORIGIN_REGEX,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
